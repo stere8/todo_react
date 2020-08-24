@@ -3,7 +3,6 @@ import './App.css';
 import Header from "./components/layouts/Header";
 import AddTodo from "./components/AddTodo";
 import Todo from './components/Todo'
-import {v4 as uuid} from 'uuid'
 import {BrowserRouter as Router , Route} from 'react-router-dom'
 import About from "./components/pages/About";
 import Axios from "axios";
