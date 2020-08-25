@@ -5,6 +5,7 @@ import AddTodo from "./components/AddTodo";
 import Todo from './components/Todo'
 import {BrowserRouter as Router , Route} from 'react-router-dom'
 import About from "./components/pages/About";
+import { v4 as uuidv4 } from 'uuid';
 import Axios from "axios";
 
 class App extends Component {
@@ -37,6 +38,7 @@ class App extends Component {
 
     addTodo = (title) =>{
         Axios.post('https://jsonplaceholder.typicode.com/todos',{
+            id : uuidv4(),
             title,
             completed : false
         }).then(res =>  this.setState({todos:[...this.state.todos,res.data]}))
